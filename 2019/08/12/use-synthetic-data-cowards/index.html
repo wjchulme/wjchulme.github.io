@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.48" />
+
+
+<title>Use synthetic data, cowards! - Stats n that</title>
+<meta property="og:title" content="Use synthetic data, cowards! - Stats n that">
+
+
+
+  
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/fonts.css" media="all">
+<link rel="stylesheet" href="/css/main.css" media="all">
+
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="/" class="nav-logo">
+    <img src="/images/willlogo.png"
+         width="50"
+         height="50"
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/about/">About</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+    <span class="article-duration">5 min read</span>
+    
+
+    <h1 class="article-title">Use synthetic data, cowards!</h1>
+
+    
+    <span class="article-date">2019/08/12</span>
+    
+
+    <div class="article-content">
+      <p><em>This is an overview of my thoughts on the use of synthetic datasets in health research. The text is adapted from an unsuccessful scholarship application, which was adapted from an earlier unsuccessful scholarship application, which was adapted from a <a href="https://osf.io/gfcrj/">talk</a> I gave at the inaugural meeting of the <a href="https://osf.io/vgt3x/">UK Open Research Working Group</a> at Aston University.</em></p>
+<hr />
+<p>Transparency and reproducibility are fundamental principles of scientific observation and discovery, ensuring that <a href="https://www.nature.com/articles/d41586-018-05256-0">science is “show me”, not “trust me”</a>. But as health researchers, we also have to consider other pesky principles like “informed consent” and “minimising harm” and “confidentiality”. It’s why we don’t remove organs from unwilling prisoners. It’s why we induce tumours in mice instead of humans. And it’s why we prevent unrestricted access to sensitive research data.</p>
+<p>Not sharing data might sometimes be justified, but it creates problems.</p>
+<p>It can prevent scrutiny of the difference between the research that was planned, conducted, and reported, leaving the evidence-base vulnerable to questionable research practices and conflicts of interest—anything from unconscious p-hacking to fraud. It can frustrate efforts to reuse data for original, independent analyses. Sometimes controlled access to patient-level data is possible, but the process is often slow, expensive, and onerous.</p>
+<p>A partial solution to these problems is the use of synthetic datasets. A synthetic dataset mimics certain useful statistical properties of a real dataset but contains no information that could be used to re-identify individual patients, so the dataset can safely be shared.</p>
+<p>Synthetic datasets are perhaps most often thought of as supporting the use-case described in figure below: create a synthetic dataset from the real dataset, share it publicly, analyse the synthetic dataset as if it were the real dataset, and then, erm, hope that the analysis produces results that reliably replicate the results that would have been derived from real dataset.</p>
+<p><img src="/post/2019-08-12-use-synthetic-data-cowards_files/use-case.png" alt="Use case" width="70%"/></p>
+<p>In this use-case, we need high confidence that the synthetic results and the real results match, without actually being able to verify it. But I’m sceptical that, in all but the most simple or contrived scenarios, methods for generating synthetic datasets are good enough to guarantee this. We <a href="https://doi.org/10.1111/rssa.12358">might</a> have some theoretical guarantees on how closely the synthetic dataset mimics the statistical properties of the real dataset in certain types of data, but we don’t have any guarantees on how closely the synthetic results mimic the real results for any arbitrary research question or statistical model.</p>
+<p>Without verifying the synthetic results against the real results should we trust them? Should we use them to inform treatment or policy decisions? I don’t think so but I would love to see examples where this has been done. Still, perhaps we should be prioritising improvements in responsible access to sensitive datasets rather than fobbing researchers off with datasets that we can’t guarantee will give reliable results.</p>
+<p>There are, however, many other opportunities to use synthetic datasets in spite of—because of!—this unreliability. Let’s consider a few examples.</p>
+<p><strong>Ever tried to make progress on a project when you’ve been waiting months for access to the dataset? Synthetic datasets — Pow!</strong> Delays in data access or data collection is often the most disruptive bottleneck in a research project. Releasing freely-accessible synthetic versions of controlled datasets has the potential to stop infeasible studies early, reducing inefficiency, waste, and unnecessary re-identification risk. You can use synthetic datasets to write and test analysis scripts, resolve computational issues, design tables and figures… this list goes on. A script can be run immediately on the real dataset once access is granted, or else run by someone else who does have access. Sure, some changes may be necessary once the real dataset is available, but most major design hurdles will already have been jumped.</p>
+<p><strong>Ever felt guilty for tweaking your study design because the results weren’t what you wanted? Synthetic datasets — Bosh!</strong> Designs developed using synthetic datasets can be revised iteratively without concerns about data-dredging or post-hoc hypothesising since you know not to trust the results. This limits wriggle-room for you to bias your methods towards favourable results, consciously or unconsciously. Your study design should be agnostic to the results, after all. Synthetic datasets (or simulated datasets if data collection hasn’t happened yet and we need to generate data from scratch) can be used to pre-register studies in a manner much more precise than with vague allusions to “multiple imputation” or “non-parametric tests”, as the script will unambiguously encode the methodological design that converts the data into evidence.</p>
+<p><strong>Ever tried to adapt someone else’s code for your own use when you didn’t have access to the dataset it was intended for? Synthetic datasets — Kablamo!</strong> Even if you didn’t use synthetic dataset in the development of your study, if for whatever reason you can’t share your dataset, preparing a synthetic dataset afterwards facilitates the reusability of your analysis scripts. This helps other groups to repurpose or build on the study’s methods and increases the impact of your research.</p>
+<p><strong>Ever needed a big, messy ‘true-to-life’ dataset for teaching or training? Synthetic datasets — Doof!</strong>
+This doesn’t need much elaboration. Small or toy datasets are incredibly useful, but they have their limits. There’s only so much you can learn about complex datasets from iris and gapminder.</p>
+<p>It’s bonkers that synthetic datasets are not used more often to increase research integrity and reduce research waste.</p>
+<p>I’m looking at you, writers of the phrase “the dataset for this study contains confidential patient-level data and cannot be shared” without making any attempt whatsoever to mitigate the problems of research transparency and reusability that this raises.</p>
+<p>I’m looking at you, PIs who obsess over being scooped, but aren’t concerned that your research isn’t reproducible.</p>
+<p>I’m looking at you, custodians of every single birth cohort, disease or treatment registry, electronic health record, trial dataset, or administrative database on the planet who make researchers wait over a year for access to your data.</p>
+<p>The point is, we can do so much more to improve research transparency and efficiency using synthetic datasets <em>without</em> worrying whether they can be trusted to reliably replace real datasets entirely. The <a href="http://dx.doi.org/10.18637/jss.v074.i11">methods</a> and <a href="https://arxiv.org/abs/1710.08874">tools</a> and <a href="https://doi.org/10.31234/osf.io/dmfb3">tutorials</a> are <a href="https://doi.org/10.31228/osf.io/bfqh3">already</a> here. Use them!</p>
+<hr />
+<iframe width="100%" height="140px" src="https://song.link/embed?url=spotify:track:4aIrUF8dWdnYQLkzrozaRq" frameborder="0" allowtransparency>
+</iframe>
+
+    </div>
+  </article>
+
+  
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="/images/hugo-logo.png" width="22" height="22"></a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+    
+
+    
+
+    
+  </body>
+</html>
+

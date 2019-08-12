@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Stats n that</title>
+    <link>https://wjchulme.github.io/</link>
+    <description>Recent content on Stats n that</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Mon, 12 Aug 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://wjchulme.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Use synthetic data, cowards!</title>
+      <link>https://wjchulme.github.io/2019/08/12/use-synthetic-data-cowards/</link>
+      <pubDate>Mon, 12 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://wjchulme.github.io/2019/08/12/use-synthetic-data-cowards/</guid>
+      <description>This is an overview of my thoughts on the use of synthetic datasets in health research. The text is adapted from an unsuccessful scholarship application, which was adapted from an earlier unsuccessful scholarship application, which was adapted from a talk I gave at the inaugural meeting of the UK Open Research Working Group at Aston University.
+Transparency and reproducibility are fundamental principles of scientific observation and discovery, ensuring that science is “show me”, not “trust me”.</description>
+    </item>
+    
+    <item>
+      <title>Reinventing the wheel</title>
+      <link>https://wjchulme.github.io/2018/07/12/circles/</link>
+      <pubDate>Thu, 12 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://wjchulme.github.io/2018/07/12/circles/</guid>
+      <description>In this extremely niche post I discuss a few different ways of constructing a circle. If you’re not interested in the accompanying fluff, skip straight to the definitions numbered below.
+Pi dayWhen I was working as one of the tutors at AIMS-Cameroon, we were asked by a local secondary school to put a talk together on Pi day (every 14 March, of course) for their pupils. We were asked that ideally it should be about pi but really anything mathsy would do.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://wjchulme.github.io/about/</link>
+      <pubDate>Fri, 06 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://wjchulme.github.io/about/</guid>
+      <description>This is a dumping ground for stuff I wrote about stats and that. I might develop it a bit further in The Future.
+twitter, github, orcid</description>
+    </item>
+    
+    <item>
+      <title>A day in the life at AIMS-Cameroon</title>
+      <link>https://wjchulme.github.io/2018/03/12/aims-rss-experience/</link>
+      <pubDate>Mon, 12 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://wjchulme.github.io/2018/03/12/aims-rss-experience/</guid>
+      <description>This is a post I wrote for the Royal Statistical Society whilst tutoring on the 2017-18 mathematics Master&amp;rsquo;s course at the African Institute for Mathematical Sciences in Limbé, Cameroon. AIMS is a network of academic centres across Africa, with various education, research, and outreach initiatives. The flagship programme is a residential Master&amp;rsquo;s degree, with courses given by lecturers invited from around the world. I arrived in Limbé in early January to tutor on these courses, joining seven other tutors and 47 students from 17 different African nations.</description>
+    </item>
+    
+  </channel>
+</rss>
